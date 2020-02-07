@@ -1,0 +1,22 @@
+body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.row {
+    background-color: aliceblue;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.site-footer .nav-link {
+    color: rgba(255, 255, 255, .5);
+}
+
+.site-footer .nav-link.active {
+    color: #fff;
+}
