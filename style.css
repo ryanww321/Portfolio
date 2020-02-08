@@ -20,3 +20,7 @@ body {
 .site-footer .nav-link.active {
     color: #fff;
 }
+
+.contact.form {
+    margin-top: 75px;
+}
