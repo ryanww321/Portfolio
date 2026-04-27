@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Senior Salesforce architect moving into AI tools, developer tooling, automation, and crypto product engineering.",
   githubUrl: "https://github.com/ryanww321",
-  linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb-92561530/",
+  linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb",
   navItems: [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },

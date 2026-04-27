@@ -1,8 +1,8 @@
 # Ryan Whitcomb Portfolio
 
-A modern developer portfolio for Ryan Whitcomb, built to present senior systems debugging, Salesforce architecture, and a transition into AI tools, developer tooling, automation, and crypto product engineering.
+A compact developer portfolio for Ryan Whitcomb, built to present senior systems debugging, Salesforce architecture, certifications, and a transition into AI tools, developer tooling, automation, and crypto product engineering.
 
-The site uses a minimalist dark interface, typed content files, reusable components, and subtle Framer Motion interactions. Project and case-study content is intentionally editable and marks unfinished work as `planned` or `in progress`.
+The site uses a dark editorial index, typed content files, reusable row components, and subtle Framer Motion interactions. Project and case-study content is intentionally editable and marks unfinished work as `planned` or `in progress`.
 
 ## Tech Stack
 
@@ -47,6 +47,7 @@ data/
   caseStudies.ts
   experiments.ts
   projects.ts
+  certifications.ts
 lib/
   site.ts
   types.ts
@@ -85,6 +86,7 @@ Update portfolio content in these files:
 - `data/projects.ts` for project cards, statuses, stack, GitHub links, and demo links.
 - `data/caseStudies.ts` for debugging stories and lessons learned.
 - `data/experiments.ts` for small prototypes and tool ideas.
+- `data/certifications.ts` for certifications, issuers, dates, and credential links.
 - `lib/site.ts` for navigation, GitHub, LinkedIn, and site metadata.
 
 Use `planned` or `in progress` until a project has a real repository and demo. Avoid presenting unfinished ideas as completed work.

@@ -11,7 +11,7 @@ type BadgeProps = {
 
 const toneClasses: Record<BadgeTone, string> = {
   default: "border-border bg-card text-foreground",
-  accent: "border-accent/40 bg-accent/10 text-accent-soft",
+  accent: "border-accent/35 bg-accent/10 text-accent-soft",
   success: "border-success/30 bg-success/10 text-success",
   warning: "border-warning/30 bg-warning/10 text-warning",
   muted: "border-border bg-white/[0.03] text-muted",

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Container } from "@/components/ui/Container";
+import { IndexRow, InlineMeta } from "@/components/ui/IndexRow";
+import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
@@ -13,19 +13,27 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <section className="py-16 sm:py-24">
-      <Container size="wide">
+      <Container className="flex flex-col gap-12" size="index">
         <Reveal>
-          <SectionHeader
-            eyebrow="Projects"
-            title="A practical roadmap for modern product engineering."
-            description="Each project is data-driven from `data/projects.ts`, so titles, status, links, stack, and positioning can be updated without rewriting the page layout."
-          />
+          <div>
+            <p className="mb-3 text-sm text-muted">Projects</p>
+            <h1 className="text-3xl font-medium tracking-normal text-foreground">Practical tools with real operating surface.</h1>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-foreground/70">
+              A focused roadmap for AI workflows, debugging systems, automation, crypto UX, and developer tools.
+            </p>
+          </div>
         </Reveal>
-        <div className="grid gap-5 lg:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.slug} project={project} index={index} />
-          ))}
-        </div>
+
+        <Reveal delay={0.06}>
+          <IndexSection title="Project roadmap">
+            {projects.map((project) => (
+              <IndexRow key={project.slug} id={project.slug} name={project.title} detail={project.description} meta={project.status}>
+                <p className="mt-2 text-xs leading-5 text-muted">{project.problem}</p>
+                <InlineMeta items={[...project.focus, ...project.stack]} />
+              </IndexRow>
+            ))}
+          </IndexSection>
+        </Reveal>
       </Container>
     </section>
   );
