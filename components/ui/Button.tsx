@@ -10,8 +10,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary:
-    "border-accent bg-accent text-white shadow-[0_0_32px_rgba(124,92,255,0.24)] hover:bg-accent/90",
+  primary: "border-accent bg-accent text-background hover:bg-accent/90",
   secondary: "border-border bg-white/[0.04] text-foreground hover:border-white/25 hover:bg-white/[0.07]",
   ghost: "border-transparent bg-transparent text-muted hover:text-foreground",
 };

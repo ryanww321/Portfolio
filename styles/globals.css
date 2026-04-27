@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0b0b0c;
-  --color-foreground: #ededed;
-  --color-muted: #8a8a8a;
-  --color-border: #26262a;
-  --color-card: #111113;
-  --color-card-strong: #17171a;
-  --color-accent: #7c5cff;
-  --color-accent-soft: #b9a8ff;
+  --color-background: #101112;
+  --color-foreground: #f2f0eb;
+  --color-muted: #8e918c;
+  --color-border: #292a28;
+  --color-card: #151617;
+  --color-card-strong: #1b1c1d;
+  --color-accent: #c7b98a;
+  --color-accent-soft: #dfd2a4;
   --color-success: #6ee7b7;
   --color-warning: #fbbf24;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", monospace;
 }
 
 :root {
   color-scheme: dark;
-  background: #0b0b0c;
+  background: #101112;
 }
 
 html {
@@ -27,35 +27,19 @@ html {
 
 body {
   min-height: 100svh;
-  background:
-    radial-gradient(circle at top left, rgba(124, 92, 255, 0.18), transparent 32rem),
-    linear-gradient(180deg, #0b0b0c 0%, #080809 100%);
-  color: #ededed;
+  background: #101112;
+  color: #f2f0eb;
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(124, 92, 255, 0.38);
-  color: #ffffff;
+  background: rgba(199, 185, 138, 0.35);
+  color: #f8f5ec;
 }
 
 a {
   text-underline-offset: 0.25em;
-}
-
-.lab-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), transparent 86%);
-}
-
-.signal-sweep {
-  background:
-    linear-gradient(90deg, transparent, rgba(124, 92, 255, 0.42), transparent),
-    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08), transparent);
 }
 
 .text-balance {
