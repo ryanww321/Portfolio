@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
 import { siteConfig } from "@/lib/site";
 import "@/styles/globals.css";
 
@@ -45,7 +44,6 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         >
           Skip to content
         </a>
-        <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
       </body>
