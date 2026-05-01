@@ -16,5 +16,5 @@ const sizeClasses: Record<ContainerSize, string> = {
 };
 
 export function Container({ children, className, size = "default" }: ContainerProps) {
-  return <div className={cn("mx-auto w-full px-5 sm:px-6 lg:px-8", sizeClasses[size], className)}>{children}</div>;
+  return <div className={cn("mx-auto w-full px-[var(--padding-pageMargin)]", sizeClasses[size], className)}>{children}</div>;
 }

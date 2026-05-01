@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #101112;
-  --color-foreground: #f2f0eb;
-  --color-muted: #8e918c;
-  --color-border: #292a28;
-  --color-card: #151617;
-  --color-card-strong: #1b1c1d;
-  --color-accent: #c7b98a;
-  --color-accent-soft: #dfd2a4;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 300;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 600;
+  --font-weight-extrabold: 700;
+  --font-weight-black: 800;
+
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-strong: var(--card-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-transparent: var(--accent-transparent);
   --color-success: #6ee7b7;
   --color-warning: #fbbf24;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -17,25 +31,43 @@
 }
 
 :root {
-  color-scheme: dark;
-  background: #101112;
+  color-scheme: light;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.15 0 0);
+  --muted: oklch(0.7 0 0);
+  --border: oklch(0.922 0 0);
+  --card: oklch(1 0 0);
+  --card-strong: oklch(0.97 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-soft: oklch(0.922 0 0);
+  --accent-transparent: oklch(0.15 0 0 / 5%);
+  --padding-pageMargin: 16px;
+  --text-base: 14.5px;
+  --icon-size: 18px;
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
   min-height: 100svh;
-  background: #101112;
-  color: #f2f0eb;
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--text-base);
+  font-weight: 300;
+  letter-spacing: 0;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
 }
 
 ::selection {
-  background: rgba(199, 185, 138, 0.35);
-  color: #f8f5ec;
+  background: color-mix(in oklch, var(--foreground) 18%, transparent);
+  color: var(--background);
 }
 
 a {
@@ -48,6 +80,36 @@ a {
 
 .text-pretty {
   text-wrap: pretty;
+}
+
+.icon-size {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.uline {
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in oklch, var(--color-muted) 55%, transparent);
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.uline:hover {
+  text-decoration-color: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --padding-pageMargin: 24px;
+  }
+}
+
+@media (pointer: coarse) {
+  :root {
+    --text-base: 16px;
+    --icon-size: 24px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
