@@ -25,6 +25,6 @@ export const certifications: Certification[] = [
     title: "Certificate, Full Stack Web Development",
     issuer: "Southern Methodist University",
     issued: "2020",
-    credentialUrl: "https://www.credly.com/badges/34052f04-acd4-44f0-a831-505b6e4a0831/linked_in_profile",
+    credentialUrl: "https://www.credly.com/badges/34052f04-acd4-44f0-a831-505b6e4a0831/",
   },
 ];
