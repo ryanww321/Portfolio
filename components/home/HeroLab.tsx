@@ -12,7 +12,7 @@ export function HeroLab() {
     >
       <div className="flex flex-col gap-1.5">
         <h1 className="text-3xl font-medium tracking-normal text-foreground">Ryan Whitcomb</h1>
-        <p className="text-base font-normal text-muted">Web Developer</p>
+        <p className="text-base font-normal text-muted">Technical Solutions Engineer</p>
       </div>
     </motion.section>
   );

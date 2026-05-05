@@ -20,9 +20,9 @@ function WorkRole({ title, startDate, endDate }: WorkExperienceRole) {
   const formattedEnd = endDate === startDate ? "" : endDate;
 
   return (
-    <div className="flex w-full flex-col gap-1 border-t-[0.5px] border-border py-3 first:border-t-0 sm:flex-row sm:justify-between sm:gap-3">
-      <div className="text-balance font-medium text-foreground/65">{title}</div>
-      <div className="flex shrink-0 gap-1 text-foreground/65 tabular-nums sm:min-w-36 sm:justify-end">
+    <div className="flex w-full flex-col items-start gap-1 border-t-[0.5px] border-border py-3 first:border-t-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
+      <div className="text-balance font-medium leading-snug text-foreground/65">{title}</div>
+      <div className="flex shrink-0 gap-1 whitespace-nowrap text-foreground/65 tabular-nums sm:min-w-36 sm:justify-end">
         <span>{startDate}</span>
         {formattedEnd ? <span>-</span> : null}
         {formattedEnd ? <span>{formattedEnd}</span> : null}
