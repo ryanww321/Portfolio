@@ -17,12 +17,12 @@ function ChevronRightIcon() {
 }
 
 function WorkRole({ title, startDate, endDate }: WorkExperienceRole) {
-  const formattedEnd = endDate === startDate ? "" : endDate.slice(2);
+  const formattedEnd = endDate === startDate ? "" : endDate;
 
   return (
-    <div className="flex w-full justify-between gap-3 border-t border-border py-3 first:border-t-0">
-      <div className="text-balance font-medium text-muted">{title}</div>
-      <div className="flex min-w-24 justify-end gap-1 text-muted tabular-nums">
+    <div className="flex w-full flex-col items-start gap-1 border-t border-border py-3 first:border-t-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
+      <div className="text-balance font-medium leading-snug text-muted">{title}</div>
+      <div className="flex shrink-0 gap-1 whitespace-nowrap text-muted tabular-nums sm:min-w-36 sm:justify-end">
         <span>{startDate}</span>
         {formattedEnd ? <span>-</span> : null}
         {formattedEnd ? <span>{formattedEnd}</span> : null}

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Ryan Whitcomb",
-  title: "Ryan Whitcomb - Web Developer",
-  description: "Web developer portfolio for Ryan Whitcomb.",
+  title: "Ryan Whitcomb - Technical Solutions Engineer",
+  description: "Technical solutions engineer portfolio for Ryan Whitcomb.",
   githubUrl: "https://github.com/ryanww321",
   linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb",
   navItems: [
