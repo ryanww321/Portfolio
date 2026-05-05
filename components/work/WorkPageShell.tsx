@@ -20,9 +20,9 @@ function WorkRole({ title, startDate, endDate }: WorkExperienceRole) {
   const formattedEnd = endDate === startDate ? "" : endDate;
 
   return (
-    <div className="flex w-full flex-col items-start gap-1 border-t border-border py-3 first:border-t-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
-      <div className="text-balance font-medium leading-snug text-muted">{title}</div>
-      <div className="flex shrink-0 gap-1 whitespace-nowrap text-muted tabular-nums sm:min-w-36 sm:justify-end">
+    <div className="flex w-full flex-col items-start gap-1 border-t-[0.5px] border-border py-3 first:border-t-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
+      <div className="text-balance font-medium leading-snug text-foreground/65">{title}</div>
+      <div className="flex shrink-0 gap-1 whitespace-nowrap text-foreground/65 tabular-nums sm:min-w-36 sm:justify-end">
         <span>{startDate}</span>
         {formattedEnd ? <span>-</span> : null}
         {formattedEnd ? <span>{formattedEnd}</span> : null}
@@ -40,21 +40,21 @@ export function WorkPageShell({ work, children }: WorkPageShellProps) {
             Work
           </Link>
           <ChevronRightIcon />
-          <span className="text-foreground/15">{work.company}</span>
+          <span className="text-foreground/65">{work.company}</span>
         </nav>
       </HomeHeader>
 
       <article className="z-0 flex flex-col items-center px-[var(--padding-pageMargin)] pb-32 text-[16px]">
-        <section className="mx-auto flex w-full max-w-xl flex-col items-center pb-[5vh] pt-[12vh]">
-          <h1 className="text-center text-5xl font-semibold leading-tight tracking-normal text-foreground text-balance">{work.company}</h1>
-          <div className="flex w-full flex-col items-stretch pt-12 text-sm">
+        <section className="mx-auto flex w-full max-w-xl flex-col items-center pb-[5vh] pt-[8vh]">
+          <h1 className="text-center text-4xl font-medium leading-tight tracking-normal text-foreground text-balance">{work.company}</h1>
+          <div className="flex w-full flex-col items-stretch pt-9 text-sm">
             {work.roles.map((role) => (
               <WorkRole key={role.title} {...role} />
             ))}
           </div>
         </section>
 
-        <div className="mx-auto flex w-full max-w-2xl flex-col gap-12">{children}</div>
+        <div className="mx-auto w-full max-w-2xl justify-center">{children}</div>
       </article>
     </>
   );

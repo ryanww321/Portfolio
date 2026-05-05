@@ -1,8 +1,8 @@
 # Ryan Whitcomb Portfolio
 
-A compact developer portfolio for Ryan Whitcomb, built to present senior systems debugging, Salesforce architecture, certifications, and a transition into AI tools, developer tooling, automation, and crypto product engineering.
+A compact developer portfolio for Ryan Whitcomb, built around work history, Salesforce architecture, certifications, selected projects, and a transition into AI tools, developer tooling, automation, and crypto product engineering.
 
-The site uses a dark editorial index, typed content files, reusable row components, and subtle Framer Motion interactions. Project and case-study content is intentionally editable and marks unfinished work as `planned` or `in progress`.
+The current site uses a light editorial index inspired by compact work-history pages: narrow content, quiet typography, row dividers, reusable content primitives, and subtle Framer Motion reveals. Work detail pages render resume-backed bullet points, the footer exposes the latest PDF resume, and the placeholder AI chat page is parked for a future site-context assistant.
 
 ## Tech Stack
 
@@ -19,8 +19,11 @@ The site uses a dark editorial index, typed content files, reusable row componen
 app/
   about/
   case-studies/
+  chat/
   experiments/
   projects/
+  site/
+  work/[slug]/
   layout.tsx
   page.tsx
   not-found.tsx
@@ -34,6 +37,11 @@ components/
   layout/
     Footer.tsx
     Navbar.tsx
+  work/
+    CertificationRow.tsx
+    ProjectNote.tsx
+    WorkPageShell.tsx
+    WorkRow.tsx
   projects/
     ProjectCard.tsx
   ui/
@@ -53,6 +61,7 @@ lib/
   types.ts
   utils.ts
 public/
+  resume.pdf
 styles/
   globals.css
 next.config.ts
@@ -86,8 +95,10 @@ Update portfolio content in these files:
 - `data/projects.ts` for project cards, statuses, stack, GitHub links, and demo links.
 - `data/caseStudies.ts` for debugging stories and lessons learned.
 - `data/experiments.ts` for small prototypes and tool ideas.
-- `data/certifications.ts` for certifications, issuers, dates, and credential links.
+- `data/certifications.ts` for certifications, issuers, dates, and credential links. Salesforce certifications point to the public Trailblazer profile and the Full Stack Web Development certificate points to the Credly badge.
+- `data/workExperience.ts` for homepage work rows and `/work/[slug]` resume bullet points.
 - `lib/site.ts` for navigation, GitHub, LinkedIn, and site metadata.
+- `public/resume.pdf` for the footer PDF resume download.
 
 Use `planned` or `in progress` until a project has a real repository and demo. Avoid presenting unfinished ideas as completed work.
 
