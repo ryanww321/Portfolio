@@ -46,6 +46,19 @@
   --icon-size: 18px;
 }
 
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.12 0 0);
+  --foreground: oklch(0.94 0 0);
+  --muted: oklch(0.63 0 0);
+  --border: oklch(1 0 0 / 11%);
+  --card: oklch(0.16 0 0);
+  --card-strong: oklch(0.2 0 0);
+  --accent: oklch(0.22 0 0);
+  --accent-soft: oklch(0.45 0 0);
+  --accent-transparent: oklch(1 0 0 / 7%);
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
