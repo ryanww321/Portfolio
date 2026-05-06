@@ -44,10 +44,10 @@ export function WorkPageShell({ work, children }: WorkPageShellProps) {
         </nav>
       </HomeHeader>
 
-      <article className="z-0 flex flex-col items-center px-[var(--padding-pageMargin)] pb-32 text-[16px]">
-        <section className="mx-auto flex min-h-[62svh] w-full max-w-xl flex-col items-center justify-center pb-[5vh] pt-[8vh] sm:min-h-0 sm:justify-start">
+      <article className="z-0 flex flex-col items-center px-[var(--padding-pageMargin)] pb-24 text-[16px] sm:pb-28 md:pb-32">
+        <section className="mx-auto flex w-full max-w-xl flex-col items-center gap-9 pb-8 pt-8 sm:gap-8 sm:pb-10 sm:pt-12 md:pt-14 lg:pt-16">
           <h1 className="text-center text-4xl font-medium leading-tight tracking-normal text-foreground text-balance">{work.company}</h1>
-          <div className="flex w-full flex-col items-stretch pt-[18vh] text-sm sm:pt-9">
+          <div className="flex w-full flex-col items-stretch text-sm">
             {work.roles.map((role) => (
               <WorkRole key={role.title} {...role} />
             ))}

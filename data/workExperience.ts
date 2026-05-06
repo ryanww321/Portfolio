@@ -24,7 +24,7 @@ export const workExperience: WorkExperience[] = [
     roles: [
       {
         title: "Senior Salesforce Consultant",
-        startDate: "Apr 2020",
+        startDate: "June 2021",
         endDate: "Feb 2026",
       },
     ],
@@ -50,7 +50,7 @@ export const workExperience: WorkExperience[] = [
       {
         title: "Salesforce Consultant",
         startDate: "Apr 2020",
-        endDate: "Jun 2021",
+        endDate: "June 2021",
       },
     ],
     highlights: [
