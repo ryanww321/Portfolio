@@ -49,16 +49,6 @@ function PdfIcon() {
   );
 }
 
-function InfoIcon() {
-  return (
-    <svg aria-hidden="true" className="icon-size" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.85">
-      <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M12 9h.01" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M11 12h1v4h1" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ChatIcon() {
   return (
     <svg aria-hidden="true" className="icon-size" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.85">
@@ -99,7 +89,6 @@ export function Footer() {
         </div>
         <div className="flex items-center justify-between gap-3">
           <FooterLink dimmed external href="/resume.pdf" icon={<PdfIcon />} label="Download resume" text="PDF" />
-          <FooterLink dimmed href="/site" icon={<InfoIcon />} label="Site info" />
           <FooterLink dimmed href="/chat" icon={<ChatIcon />} label="AI Chat" />
         </div>
       </Container>
