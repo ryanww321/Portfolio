@@ -11,11 +11,12 @@ function ChevronLeftIcon() {
 export function HomeButton() {
   return (
     <Link
-      className="flex h-9 w-fit items-center gap-1 rounded-full bg-card/70 px-3 font-medium text-foreground shadow-[inset_0_0_0_1px_var(--color-border),0_12px_40px_-24px_var(--color-foreground)] transition hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border"
+      aria-label="Home"
+      className="flex h-14 w-14 items-center justify-center rounded-full bg-card/70 font-medium text-foreground shadow-[inset_0_0_0_1px_var(--color-border),0_12px_40px_-24px_var(--color-foreground)] transition hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border sm:h-9 sm:w-fit sm:gap-1 sm:px-3"
       href="/"
     >
       <ChevronLeftIcon />
-      <span>Home</span>
+      <span className="hidden sm:inline">Home</span>
     </Link>
   );
 }
