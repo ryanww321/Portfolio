@@ -15,10 +15,10 @@ export function generateStaticParams() {
 
 function WorkBulletList({ items }: { items: string[] }) {
   return (
-    <ul className="my-[var(--padding-pageMargin)] ml-4 max-w-full list-disc space-y-[calc(var(--padding-pageMargin)/2)] sm:ml-[var(--padding-pageMargin)] [&>li]:mt-[calc(var(--padding-pageMargin)/2)]">
+    <ul className="ml-4 max-w-full list-disc space-y-5 sm:ml-[var(--padding-pageMargin)] sm:space-y-6">
       {items.map((item) => (
         <li key={item} className="max-w-full pl-1 leading-normal sm:pl-[calc(var(--padding-pageMargin)/3)]">
-          <p className="my-[var(--padding-pageMargin)] max-w-full break-words leading-relaxed">{item}</p>
+          <p className="max-w-full break-words leading-relaxed">{item}</p>
         </li>
       ))}
     </ul>
