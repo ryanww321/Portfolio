@@ -20,8 +20,8 @@ function WorkRole({ title, startDate, endDate }: WorkExperienceRole) {
   const formattedEnd = endDate === startDate ? "" : endDate;
 
   return (
-    <div className="flex w-full flex-col items-start gap-1 border-t-[0.5px] border-border py-3 first:border-t-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
-      <div className="text-balance font-medium leading-snug text-foreground/65">{title}</div>
+    <div className="flex w-full items-baseline justify-between gap-3 border-t-[0.5px] border-border py-3 first:border-t-0">
+      <div className="text-balance leading-snug text-foreground/65 sm:font-medium">{title}</div>
       <div className="flex shrink-0 gap-1 whitespace-nowrap text-foreground/65 tabular-nums sm:min-w-36 sm:justify-end">
         <span>{startDate}</span>
         {formattedEnd ? <span>-</span> : null}
@@ -40,14 +40,14 @@ export function WorkPageShell({ work, children }: WorkPageShellProps) {
             Work
           </Link>
           <ChevronRightIcon />
-          <span className="text-foreground/65">{work.company}</span>
+          <span className="text-muted/35 sm:text-foreground/65">{work.company}</span>
         </nav>
       </HomeHeader>
 
       <article className="z-0 flex flex-col items-center px-[var(--padding-pageMargin)] pb-32 text-[16px]">
-        <section className="mx-auto flex w-full max-w-xl flex-col items-center pb-[5vh] pt-[8vh]">
+        <section className="mx-auto flex min-h-[62svh] w-full max-w-xl flex-col items-center justify-center pb-[5vh] pt-[8vh] sm:min-h-0 sm:justify-start">
           <h1 className="text-center text-4xl font-medium leading-tight tracking-normal text-foreground text-balance">{work.company}</h1>
-          <div className="flex w-full flex-col items-stretch pt-9 text-sm">
+          <div className="flex w-full flex-col items-stretch pt-[18vh] text-sm sm:pt-9">
             {work.roles.map((role) => (
               <WorkRole key={role.title} {...role} />
             ))}
