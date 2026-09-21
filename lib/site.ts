@@ -6,6 +6,7 @@ export const siteConfig = {
   linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb",
   navItems: [
     { href: "/", label: "Home" },
+    { href: "/work/protopixel", label: "Protopixel" },
     { href: "/work/cgi", label: "CGI" },
     { href: "/work/sense-corp", label: "Sense Corp" },
     { href: "/work/dealer-com", label: "Dealer.com" },
