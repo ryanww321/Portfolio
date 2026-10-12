@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     "Omnistudio solution architect",
     "Salesforce Experience Cloud",
     "Omniscripts",
-    "FlexCards",
-    "Salesforce Public Sector Solutions",
-    "public sector Salesforce",
     "Agentforce",
+    "solutions engineer",
+    "Next.js",
+    "AI-assisted development",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
