@@ -33,9 +33,12 @@ export async function generateMetadata({ params }: WorkPageProps): Promise<Metad
     return {};
   }
 
+  const role = work.roles[0];
+
   return {
     title: work.company,
-    description: work.description,
+    description: role ? `${role.title} at ${work.company}. ${work.description}` : work.description,
+    alternates: { canonical: `/work/${work.slug}` },
   };
 }
 

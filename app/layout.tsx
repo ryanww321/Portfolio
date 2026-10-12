@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
     template: "%s | Ryan Whitcomb",
@@ -26,18 +27,29 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Ryan Whitcomb",
-    "product engineer",
-    "AI tools",
-    "developer tools",
-    "Salesforce architect",
-    "automation",
-    "crypto",
+    "Salesforce consultant",
+    "OmniStudio consultant",
+    "OmniStudio solution architect",
+    "Salesforce Experience Cloud",
+    "OmniScript",
+    "FlexCards",
+    "Salesforce Public Sector Solutions",
+    "public sector Salesforce",
+    "Agentforce",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
 };
 
@@ -50,6 +62,7 @@ export const viewport: Viewport = {
 
 const systemThemeScript = `
 (() => {
+  document.documentElement.classList.add("js");
   try {
     const query = window.matchMedia("(prefers-color-scheme: dark)");
     const applyTheme = () => {

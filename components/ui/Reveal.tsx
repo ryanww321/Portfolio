@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 type RevealProps = {
@@ -9,16 +9,34 @@ type RevealProps = {
   delay?: number;
 };
 
+// Content is server-rendered visible. The hidden starting state only applies once the
+// `js` class is on <html> (see app/layout.tsx), and is skipped for reduced motion.
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      element.dataset.revealed = "true";
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting) {
+        element.dataset.revealed = "true";
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, filter: "blur(8px)", y: 10, scale: 0.995 }}
-      whileInView={{ opacity: 1, filter: "blur(0px)", y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-      className={cn(className)}
-    >
+    <div ref={ref} className={cn("reveal", className)} style={{ "--reveal-delay": `${delay}s` } as CSSProperties}>
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -60,7 +60,7 @@ function ChatIcon() {
 function FooterLink({ href, label, icon, text, external, dimmed }: FooterLinkProps) {
   const className =
     "flex items-center justify-center gap-1.5 rounded-sm p-1.5 text-foreground transition hover:bg-accent hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border " +
-    (dimmed ? "opacity-50 " : "");
+    (dimmed ? "opacity-70 " : "");
 
   if (external) {
     return (
