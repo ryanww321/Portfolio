@@ -95,7 +95,7 @@ export const workExperience: WorkExperience[] = [
       },
     ],
     highlights: [
-      "Orchestrated hundreds of enterprise website builds and data migrations over a 5-year tenure, aligning DevOps and Engineering teams to deliver seamless, zero-downtime launches.",
+      "Delivered roughly 300 enterprise website implementations over five years, carrying 20 to 30 dealer accounts at once through 60 to 90 day builds and coordinating launches to zero downtime.",
       "Led the platform upgrade for the Ford Elite Plus and Ford OEM Retail program for a top-ranked global dealership, managing VIP client relationships to execute a seamless go-live.",
       "Managed a team of 10 contractors and created clear quality checks to ensure data accuracy across multiple simultaneous migrations.",
     ],
