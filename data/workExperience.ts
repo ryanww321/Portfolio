@@ -97,7 +97,7 @@ export const workExperience: WorkExperience[] = [
     highlights: [
       "Delivered roughly 300 enterprise website implementations over five years, carrying 20 to 30 dealer accounts at once through 60 to 90 day builds and coordinating launches to zero downtime.",
       "Led the Ford Elite Plus and Ford OEM Retail platform upgrade for a top-ranked global dealership through go-live.",
-      "Managed a team of 10 contractors and created clear quality checks to ensure data accuracy across multiple simultaneous migrations.",
+      "Managed a team of up to 10 contractors across simultaneous dealer migrations.",
     ],
     tools: ["Implementation", "Data migration", "Client delivery", "QA", "Launch planning"],
   },
