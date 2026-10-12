@@ -14,7 +14,7 @@ export function HeroLab() {
         <h1 className="text-3xl font-medium tracking-normal text-foreground">Ryan Whitcomb</h1>
         <p className="text-base font-normal text-muted">Technical Solutions Engineer</p>
         <p className="pt-3 text-base leading-relaxed text-foreground/85 text-pretty">
-          Salesforce and OmniStudio consultant building guided intake, licensing, and grants solutions for public-sector clients.
+          Salesforce and Omnistudio consultant building guided intake, licensing, and grants solutions for public-sector clients.
         </p>
       </div>
     </motion.section>

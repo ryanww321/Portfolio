@@ -24,7 +24,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.06}>
-            <IndexSection title="Salesforce and OmniStudio consulting">
+            <IndexSection title="Salesforce and Omnistudio consulting">
               {salesforceWork.map((work) => (
                 <WorkRow key={work.slug} {...work} />
               ))}
