@@ -12,8 +12,8 @@ export function CertificationRow({ title, issuer, issued, credentialUrl }: Certi
         <div className="truncate">{title}</div>
       </div>
       <div className="flex shrink-0 grow gap-1 text-muted tabular-nums">
-        <div className="grow truncate opacity-65">{issuer}</div>
-        <div className="shrink-0 text-right opacity-65">{issued}</div>
+        <div className="grow truncate">{issuer}</div>
+        <div className="shrink-0 text-right">{issued}</div>
       </div>
     </a>
   );

@@ -9,6 +9,7 @@ import { workExperience } from "@/data/workExperience";
 export const metadata: Metadata = {
   title: "Site info",
   description: "Work pages and utility links for Ryan Whitcomb's portfolio.",
+  alternates: { canonical: "/site" },
 };
 
 export default function SiteInfoPage() {

@@ -7,7 +7,7 @@ export function ProjectNote() {
       <div className="flex grow gap-1.5">
         <div className="leading-relaxed">
           <span className="uline">Projects are in the garage right now.</span>
-          <span className="ml-3 text-muted opacity-65">I am still tuning what deserves a proper launch.</span>
+          <span className="ml-3 text-muted">I am still tuning what deserves a proper launch.</span>
         </div>
       </div>
     </div>

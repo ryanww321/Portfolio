@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroLab } from "@/components/home/HeroLab";
 import { CertificationRow } from "@/components/work/CertificationRow";
 import { ProjectNote } from "@/components/work/ProjectNote";
@@ -7,6 +8,10 @@ import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { certifications } from "@/data/certifications";
 import { earlierWork, modernWebWork, salesforceWork } from "@/data/workExperience";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

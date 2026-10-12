@@ -1,7 +1,9 @@
 export const siteConfig = {
   name: "Ryan Whitcomb",
-  title: "Ryan Whitcomb - Technical Solutions Engineer",
-  description: "Technical solutions engineer portfolio for Ryan Whitcomb.",
+  title: "Ryan Whitcomb | Salesforce, Omnistudio & Modern Web",
+  description:
+    "Six years delivering Salesforce and Omnistudio solutions, now building modern web apps with AI-assisted workflows.",
+  url: "https://ryan-whitcomb-portfolio.vercel.app",
   githubUrl: "https://github.com/ryanww321",
   linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb",
   navItems: [

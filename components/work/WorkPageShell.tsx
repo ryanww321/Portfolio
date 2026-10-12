@@ -40,7 +40,7 @@ export function WorkPageShell({ work, children }: WorkPageShellProps) {
             Work
           </Link>
           <ChevronRightIcon />
-          <span className="text-muted/35 sm:text-foreground/65">{work.company}</span>
+          <span className="text-muted sm:text-foreground/65">{work.company}</span>
         </nav>
       </HomeHeader>
 
