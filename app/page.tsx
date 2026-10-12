@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { certifications } from "@/data/certifications";
-import { earlierWork, latestWork, modernWebWork } from "@/data/workExperience";
+import { earlierWork, modernWebWork, salesforceWork } from "@/data/workExperience";
 
 export default function HomePage() {
   return (
@@ -16,8 +16,8 @@ export default function HomePage() {
 
         <div className="flex flex-col gap-12 pt-12">
           <Reveal delay={0.04}>
-            <IndexSection title="Latest">
-              {latestWork.map((work) => (
+            <IndexSection title="Salesforce and OmniStudio consulting">
+              {salesforceWork.map((work) => (
                 <WorkRow key={work.slug} {...work} />
               ))}
             </IndexSection>

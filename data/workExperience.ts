@@ -8,7 +8,7 @@ export type WorkExperienceRole = {
 export type WorkExperience = {
   company: string;
   slug: string;
-  section: "latest" | "modernWeb" | "earlier";
+  section: "salesforce" | "modernWeb" | "earlier";
   description: string;
   roles: WorkExperienceRole[];
   highlights: string[];
@@ -19,7 +19,7 @@ export const workExperience: WorkExperience[] = [
   {
     company: "CGI",
     slug: "cgi",
-    section: "latest",
+    section: "salesforce",
     description: "Global IT business and consulting firm.",
     roles: [
       {
@@ -70,7 +70,7 @@ export const workExperience: WorkExperience[] = [
   {
     company: "Sense Corp",
     slug: "sense-corp",
-    section: "earlier",
+    section: "salesforce",
     description: "Boutique consulting firm acquired by CGI.",
     roles: [
       {
@@ -108,7 +108,7 @@ export const workExperience: WorkExperience[] = [
   },
 ];
 
-export const latestWork = workExperience.filter((item) => item.section === "latest");
+export const salesforceWork = workExperience.filter((item) => item.section === "salesforce");
 export const modernWebWork = workExperience.filter((item) => item.section === "modernWeb");
 export const earlierWork = workExperience.filter((item) => item.section === "earlier");
 
