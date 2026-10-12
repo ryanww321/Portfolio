@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type ContainerSize = "default" | "wide" | "narrow" | "index";
+type ContainerSize = "default" | "wide" | "page" | "narrow" | "index";
 
 type ContainerProps = {
   children: React.ReactNode;
@@ -11,6 +11,7 @@ type ContainerProps = {
 const sizeClasses: Record<ContainerSize, string> = {
   default: "max-w-6xl",
   wide: "max-w-7xl",
+  page: "max-w-4xl",
   narrow: "max-w-3xl",
   index: "max-w-2xl",
 };

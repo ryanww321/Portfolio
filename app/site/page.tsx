@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { HomeHeader } from "@/components/ui/HomeHeader";
+import { SiteNav } from "@/components/home/SiteNav";
 import { IndexRow } from "@/components/ui/IndexRow";
 import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function SiteInfoPage() {
   return (
-    <>
-      <HomeHeader />
+    <Container className="flex flex-col pb-16" size="page">
+      <SiteNav />
 
-      <section className="pb-32 pt-16">
-        <Container className="flex flex-col gap-12" size="index">
+      <section className="pt-10">
+        <div className="flex flex-col gap-12">
           <Reveal>
             <div className="flex flex-col gap-2">
-              <h1 className="text-3xl font-medium tracking-normal text-foreground">Site info</h1>
+              <h1 className="font-display text-4xl font-bold tracking-tight text-foreground">Site info</h1>
             </div>
           </Reveal>
 
@@ -36,11 +36,10 @@ export default function SiteInfoPage() {
           <Reveal delay={0.1}>
             <IndexSection title="Utility">
               <IndexRow name="Resume" detail="Download the PDF resume attached for this build." href="/resume.pdf" external />
-              <IndexRow name="AI Chat" detail="In the garage while I tune a site-context chat about me." href="/chat" />
             </IndexSection>
           </Reveal>
-        </Container>
+        </div>
       </section>
-    </>
+    </Container>
   );
 }

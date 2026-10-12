@@ -7,6 +7,7 @@ export type WorkExperienceRole = {
 
 export type WorkExperience = {
   company: string;
+  monogram: string;
   slug: string;
   section: "salesforce" | "modernWeb" | "earlier";
   description: string;
@@ -18,6 +19,7 @@ export type WorkExperience = {
 export const workExperience: WorkExperience[] = [
   {
     company: "Protopixel",
+    monogram: "PP",
     slug: "protopixel",
     section: "modernWeb",
     description:
@@ -41,6 +43,7 @@ export const workExperience: WorkExperience[] = [
   },
   {
     company: "CGI",
+    monogram: "CGI",
     slug: "cgi",
     section: "salesforce",
     description: "Global IT business and consulting firm.",
@@ -65,6 +68,7 @@ export const workExperience: WorkExperience[] = [
   },
   {
     company: "Sense Corp",
+    monogram: "SC",
     slug: "sense-corp",
     section: "salesforce",
     description: "Boutique consulting firm acquired by CGI.",
@@ -84,6 +88,7 @@ export const workExperience: WorkExperience[] = [
   },
   {
     company: "Dealer.com (Cox Automotive)",
+    monogram: "DC",
     slug: "dealer-com",
     section: "earlier",
     description: "Automotive digital marketing platform for car dealerships.",
