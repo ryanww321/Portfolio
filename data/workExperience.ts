@@ -52,7 +52,7 @@ export const workExperience: WorkExperience[] = [
       },
     ],
     highlights: [
-      "Developed the core CGI Transcend® child support intake intellectual property using Salesforce Omnistudio, creating an intuitive, step-by-step interactive wizard that serves as the reusable baseline for state-level implementations.",
+      "Extended CGI Transcend®, CGI's Salesforce case management product, for child support: owned the data architecture, extended the Omnistudio layer for state-specific configuration, and built AppExchange packages reused across state implementations.",
       "Joined Virginia's child support modernization from the start, replacing a 29-year-old mainframe with a federally certifiable Salesforce platform under a 7-year, $83M contract; owned the data architecture, built guided Omnistudio forms and Experience Cloud self-service components, and supported CI/CD through Copado for a system managing up to 275k cases annually.",
       "Served as Omnistudio Solution Architect and one of three Scrum Leads for the Texas Department of Licensing & Regulation, designing guided licensing workflows and Experience Cloud registration and post-login routing for a system issuing up to 960k licenses annually, and presented the opening Roadshow demo to roughly 150 stakeholders.",
       "Collaborated on the intake architecture for the Ohio Department of Developmental Disabilities, combining Salesforce Omnistudio guided flows with Salesforce low-code tools to manage waiver programs for up to 90k individuals.",
