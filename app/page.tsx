@@ -16,16 +16,16 @@ export default function HomePage() {
 
         <div className="flex flex-col gap-12 pt-12">
           <Reveal delay={0.04}>
-            <IndexSection title="Salesforce and OmniStudio consulting">
-              {salesforceWork.map((work) => (
+            <IndexSection title="Modern web and AI-assisted development">
+              {modernWebWork.map((work) => (
                 <WorkRow key={work.slug} {...work} />
               ))}
             </IndexSection>
           </Reveal>
 
           <Reveal delay={0.06}>
-            <IndexSection title="Modern web and AI-assisted development">
-              {modernWebWork.map((work) => (
+            <IndexSection title="Salesforce and OmniStudio consulting">
+              {salesforceWork.map((work) => (
                 <WorkRow key={work.slug} {...work} />
               ))}
             </IndexSection>

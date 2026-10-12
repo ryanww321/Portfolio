@@ -17,6 +17,30 @@ export type WorkExperience = {
 
 export const workExperience: WorkExperience[] = [
   {
+    company: "Protopixel",
+    slug: "protopixel",
+    section: "modernWeb",
+    description:
+      "SwiftPass is a passport and visa customer portal serving travelers, partner businesses, and review staff.",
+    roles: [
+      {
+        title: "Freelance Developer",
+        subtitle: "SwiftPass",
+        startDate: "Mar 2026",
+        endDate: "Present",
+      },
+    ],
+    highlights: [
+      "Scoped and shipped 10 features and fixes on SwiftPass, a passport and visa customer portal built with Next.js, React, TypeScript, and Supabase, with pull requests reviewed and merged by the project architect.",
+      "Worked each change from a Linear spec carrying reproduction steps, context, and acceptance criteria, drive the implementation through Claude Code and Codex, then verify the real flow in the browser for every affected role before opening a pull request linked back to its ticket.",
+      "Closed a duplicate-application race condition in PostgreSQL with a partial unique index.",
+      "Fixed a Supabase Storage path validation defect.",
+      "Worked inside a Supabase Row-Level Security model spanning five roles across traveler, partner, and staff surfaces.",
+      "Implemented authorization-aware paginated RPCs for the applications and team views, along with access-aware advanced and saved filters, and opened them for review.",
+    ],
+    tools: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Linear", "Claude Code", "Codex", "Docker (local development)"],
+  },
+  {
     company: "CGI",
     slug: "cgi",
     section: "salesforce",
@@ -42,30 +66,6 @@ export const workExperience: WorkExperience[] = [
       "Designed and implemented role-based access controls for CGI Transcend® and the Virginia Department of Social Services, securing sensitive child support data (PII) across public portals and internal caseworker workflows.",
     ],
     tools: ["Salesforce", "Omnistudio", "Experience Cloud", "Copado", "Azure DevOps"],
-  },
-  {
-    company: "Protopixel",
-    slug: "protopixel",
-    section: "modernWeb",
-    description:
-      "SwiftPass is a passport and visa customer portal serving travelers, partner businesses, and review staff.",
-    roles: [
-      {
-        title: "Freelance Developer",
-        subtitle: "SwiftPass",
-        startDate: "Mar 2026",
-        endDate: "Present",
-      },
-    ],
-    highlights: [
-      "Scoped and shipped 7 features and fixes on SwiftPass, a passport and visa customer portal built with Next.js, React, TypeScript, and Supabase, with pull requests reviewed and merged by the project architect.",
-      "Worked each change from a Linear spec carrying reproduction steps, context, and acceptance criteria, drive the implementation through Claude Code and Codex, then verify the real flow in the browser for every affected role before opening a pull request linked back to its ticket.",
-      "Closed a duplicate-application race condition in PostgreSQL with a partial unique index.",
-      "Fixed a Supabase Storage path validation defect.",
-      "Worked inside a Supabase Row-Level Security model spanning five roles across traveler, partner, and staff surfaces.",
-      "Implemented authorization-aware paginated RPCs for the applications and team views, along with access-aware advanced and saved filters, and opened them for review.",
-    ],
-    tools: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Linear", "Claude Code", "Codex", "Docker (local development)"],
   },
   {
     company: "Sense Corp",
