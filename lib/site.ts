@@ -8,7 +8,7 @@ export const siteConfig = {
   linkedinUrl: "https://www.linkedin.com/in/ryan-whitcomb",
   resumeUrl: "/resume.pdf",
   // Public contact address. While empty, the primary call to action points to LinkedIn.
-  email: "",
+  email: "ryanww321@gmail.com",
   navItems: [
     { href: "/", label: "Home" },
     { href: "/work/protopixel", label: "Protopixel" },
