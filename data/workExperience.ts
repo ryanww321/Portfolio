@@ -83,7 +83,7 @@ export const workExperience: WorkExperience[] = [
     tools: ["Salesforce", "Flow", "Reports", "Dashboards", "Agile"],
   },
   {
-    company: "Dealer.com",
+    company: "Dealer.com (Cox Automotive)",
     slug: "dealer-com",
     section: "earlier",
     description: "Automotive digital marketing platform for car dealerships.",
