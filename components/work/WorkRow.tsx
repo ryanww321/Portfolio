@@ -16,9 +16,9 @@ function RoleLine({ title, subtitle, startDate, endDate, hasLink }: WorkExperien
 
   return (
     <div className="flex flex-col gap-1 py-1 first:pt-0 last:pb-0 sm:flex-row sm:justify-between sm:gap-3">
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-x-2 gap-y-1">
         <div className={cn("text-balance md:font-medium", hasLink && "uline")}>{title}</div>
-        {subtitle ? <div className="hidden text-muted opacity-65 sm:block">{subtitle}</div> : null}
+        {subtitle ? <div className="text-muted opacity-65">{subtitle}</div> : null}
       </div>
       <div className="flex shrink-0 gap-0.5 text-muted tabular-nums sm:min-w-36 sm:justify-end">
         <div>{startDate}</div>
