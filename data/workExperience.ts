@@ -76,8 +76,7 @@ export const workExperience: WorkExperience[] = [
       },
     ],
     highlights: [
-      "Executed core Salesforce configuration including data modeling, security, automation, and user access controls across successive client engagements.",
-      "Translated raw business requirements into functional user stories, scalable system features, and configurable Salesforce solutions aligned to stakeholder needs.",
+      "Began the Ohio Department of Developmental Disabilities implementation in August 2020, translating program requirements into user stories and Salesforce configuration; the engagement continued after CGI acquired Sense Corp.",
       "Contributed to a Salesforce-based Adult Protective Services application for Oklahoma's Department of Human Services as a Salesforce Technical Analyst, supporting core data architecture, security model configuration, and release management and testing.",
       "Built actionable Dashboards and Reports that provided leadership with real-time visibility into key performance indicators, turning raw system data into useful operational insight.",
     ],
