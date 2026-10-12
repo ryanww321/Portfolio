@@ -1,4 +1,3 @@
-import type { WorkStatus } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 type BadgeTone = "default" | "accent" | "success" | "warning" | "muted";
@@ -29,14 +28,4 @@ export function Badge({ children, tone = "default", className }: BadgeProps) {
       {children}
     </span>
   );
-}
-
-export function StatusBadge({ status }: { status: WorkStatus }) {
-  const tone: Record<WorkStatus, BadgeTone> = {
-    planned: "muted",
-    "in progress": "accent",
-    live: "success",
-  };
-
-  return <Badge tone={tone[status]}>{status}</Badge>;
 }
