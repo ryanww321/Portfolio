@@ -1,61 +1,58 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { WorkExperience, WorkExperienceRole } from "@/data/workExperience";
-import { HomeHeader } from "@/components/ui/HomeHeader";
+import { SiteNav } from "@/components/home/SiteNav";
+import { Container } from "@/components/ui/Container";
+import type { WorkExperience } from "@/data/workExperience";
 
 type WorkPageShellProps = {
   work: WorkExperience;
   children: ReactNode;
 };
 
-function ChevronRightIcon() {
-  return (
-    <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path d="m9 6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function WorkRole({ title, startDate, endDate }: WorkExperienceRole) {
-  const formattedEnd = endDate === startDate ? "" : endDate;
-
-  return (
-    <div className="flex w-full items-baseline justify-between gap-3 border-t-[0.5px] border-border py-3 first:border-t-0">
-      <div className="text-balance leading-snug text-foreground/65 sm:font-medium">{title}</div>
-      <div className="flex shrink-0 gap-1 whitespace-nowrap text-foreground/65 tabular-nums sm:min-w-36 sm:justify-end">
-        <span>{startDate}</span>
-        {formattedEnd ? <span>-</span> : null}
-        {formattedEnd ? <span>{formattedEnd}</span> : null}
-      </div>
-    </div>
-  );
-}
-
 export function WorkPageShell({ work, children }: WorkPageShellProps) {
   return (
-    <>
-      <HomeHeader>
-        <nav className="flex items-center justify-center gap-3 text-base font-medium" aria-label="Breadcrumb">
-          <Link className="text-muted transition hover:text-foreground" href="/">
-            Work
-          </Link>
-          <ChevronRightIcon />
-          <span className="text-muted sm:text-foreground/65">{work.company}</span>
-        </nav>
-      </HomeHeader>
+    <Container className="flex flex-col pb-16" size="page">
+      <SiteNav />
 
-      <article className="z-0 flex flex-col items-center px-[var(--padding-pageMargin)] pb-24 text-[16px] sm:pb-28 md:pb-32">
-        <section className="mx-auto flex w-full max-w-xl flex-col items-center gap-9 pb-8 pt-8 sm:gap-8 sm:pb-10 sm:pt-12 md:pt-14 lg:pt-16">
-          <h1 className="text-center text-4xl font-medium leading-tight tracking-normal text-foreground text-balance">{work.company}</h1>
-          <div className="flex w-full flex-col items-stretch text-sm">
+      <article className="flex flex-col gap-10 pt-6 sm:pt-10">
+        <header className="flex flex-col gap-5 border-b border-border pb-8">
+          <Link className="w-fit text-sm text-muted transition hover:text-foreground" href="/#experience">
+            <span aria-hidden="true">← </span>All experience
+          </Link>
+          <div className="flex items-center gap-4">
+            <span
+              aria-hidden="true"
+              className="grid h-12 w-12 shrink-0 place-items-center rounded-lg border border-border bg-card font-mono text-xs font-medium text-brand"
+            >
+              {work.monogram}
+            </span>
+            <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground text-balance">{work.company}</h1>
+          </div>
+          <div className="flex flex-col gap-1">
             {work.roles.map((role) => (
-              <WorkRole key={role.title} {...role} />
+              <p key={role.title} className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span className="font-semibold text-foreground">
+                  {role.title}
+                  {role.subtitle ? <span className="font-normal text-muted">, {role.subtitle}</span> : null}
+                </span>
+                <span className="font-mono text-xs tabular-nums text-muted">
+                  {role.startDate} – {role.endDate}
+                </span>
+              </p>
             ))}
           </div>
-        </section>
+          <p className="max-w-2xl text-lg leading-relaxed text-muted text-pretty">{work.description}</p>
+          <ul aria-label="Tools" className="flex flex-wrap gap-1.5">
+            {work.tools.map((tool) => (
+              <li key={tool} className="rounded border border-border bg-card px-2 py-0.5 font-mono text-[11px] text-muted">
+                {tool}
+              </li>
+            ))}
+          </ul>
+        </header>
 
-        <div className="mx-auto w-full max-w-2xl justify-center">{children}</div>
+        <div className="max-w-2xl">{children}</div>
       </article>
-    </>
+    </Container>
   );
 }

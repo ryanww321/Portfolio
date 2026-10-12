@@ -13,8 +13,8 @@ type LinkButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 const variantClasses: Record<LinkButtonVariant, string> = {
-  primary: "border-accent bg-accent text-background hover:bg-accent/90",
-  secondary: "border-border bg-white/[0.04] text-foreground hover:border-white/25 hover:bg-white/[0.07]",
+  primary: "border-brand bg-brand text-brand-foreground hover:bg-brand/90",
+  secondary: "border-border bg-card text-foreground hover:border-foreground/25",
   ghost: "border-transparent bg-transparent text-muted hover:text-foreground",
 };
 
@@ -28,7 +28,7 @@ export function LinkButton({
   ...props
 }: LinkButtonProps) {
   const classes = cn(
-    "inline-flex h-11 items-center justify-center rounded-md border px-5 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "inline-flex h-11 items-center justify-center rounded-md border px-5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background",
     variantClasses[variant],
     className,
   );

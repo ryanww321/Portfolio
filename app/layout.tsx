@@ -1,14 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist_Mono, Instrument_Sans } from "next/font/google";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site";
 import "@/styles/globals.css";
 
-const geistSans = Geist({
+const bodyFont = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-body",
+  display: "swap",
+});
+
+const displayFont = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-display-face",
   display: "swap",
 });
 
@@ -55,8 +62,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#090909" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f8fb" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a1020" },
   ],
 };
 
@@ -81,12 +88,12 @@ const systemThemeScript = `
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" className={`${bodyFont.variable} ${displayFont.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="bg-background text-foreground antialiased">
         <Script id="system-theme" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: systemThemeScript }} />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-brand-foreground"
         >
           Skip to content
         </a>

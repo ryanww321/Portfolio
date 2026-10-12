@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { HeroLab } from "@/components/home/HeroLab";
-import { CertificationRow } from "@/components/work/CertificationRow";
-import { ProjectNote } from "@/components/work/ProjectNote";
-import { WorkRow } from "@/components/work/WorkRow";
+import { CertificationList } from "@/components/home/CertificationList";
+import { EngagementGrid } from "@/components/home/EngagementGrid";
+import { ExperienceList } from "@/components/home/ExperienceList";
+import { Hero } from "@/components/home/Hero";
+import { HomeSection } from "@/components/home/HomeSection";
+import { ImpactStrip } from "@/components/home/ImpactStrip";
+import { SiteNav } from "@/components/home/SiteNav";
 import { Container } from "@/components/ui/Container";
-import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
-import { certifications } from "@/data/certifications";
-import { earlierWork, modernWebWork, salesforceWork } from "@/data/workExperience";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -15,48 +15,30 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="pb-32">
-      <Container size="index">
-        <HeroLab />
+    <Container className="flex flex-col gap-14 pb-16 sm:gap-16" size="page">
+      <div className="flex flex-col gap-10 sm:gap-12">
+        <SiteNav />
+        <Hero />
+        <ImpactStrip />
+      </div>
 
-        <div className="flex flex-col gap-12 pt-12">
-          <Reveal delay={0.04}>
-            <IndexSection title="Modern web and AI-assisted development">
-              {modernWebWork.map((work) => (
-                <WorkRow key={work.slug} {...work} />
-              ))}
-            </IndexSection>
-          </Reveal>
+      <Reveal delay={0.04}>
+        <HomeSection id="engagements" title="Selected engagements">
+          <EngagementGrid />
+        </HomeSection>
+      </Reveal>
 
-          <Reveal delay={0.06}>
-            <IndexSection title="Salesforce and Omnistudio consulting">
-              {salesforceWork.map((work) => (
-                <WorkRow key={work.slug} {...work} />
-              ))}
-            </IndexSection>
-          </Reveal>
+      <Reveal delay={0.06}>
+        <HomeSection id="experience" title="Experience">
+          <ExperienceList />
+        </HomeSection>
+      </Reveal>
 
-          <Reveal delay={0.08}>
-            <div className="flex flex-col gap-12">
-              <IndexSection title="Earlier">
-                {earlierWork.map((work) => (
-                  <WorkRow key={work.slug} className="text-foreground/65" {...work} />
-                ))}
-              </IndexSection>
-
-              <IndexSection title="Certifications">
-                {certifications.map((certification) => (
-                  <CertificationRow key={`${certification.title}-${certification.issued}`} {...certification} />
-                ))}
-              </IndexSection>
-
-              <IndexSection title="Projects">
-                <ProjectNote />
-              </IndexSection>
-            </div>
-          </Reveal>
-        </div>
-      </Container>
-    </div>
+      <Reveal delay={0.08}>
+        <HomeSection id="certifications" title="Certifications">
+          <CertificationList />
+        </HomeSection>
+      </Reveal>
+    </Container>
   );
 }
