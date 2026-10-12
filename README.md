@@ -17,21 +17,13 @@ The current site uses a light editorial index inspired by compact work-history p
 
 ```txt
 app/
-  about/
-  case-studies/
   chat/
-  experiments/
-  projects/
   site/
   work/[slug]/
   layout.tsx
   page.tsx
   not-found.tsx
 components/
-  case-studies/
-    CaseStudyCard.tsx
-  experiments/
-    ExperimentCard.tsx
   home/
     HeroLab.tsx
   layout/
@@ -42,8 +34,6 @@ components/
     ProjectNote.tsx
     WorkPageShell.tsx
     WorkRow.tsx
-  projects/
-    ProjectCard.tsx
   ui/
     Badge.tsx
     Button.tsx
@@ -52,9 +42,6 @@ components/
     Reveal.tsx
     SectionHeader.tsx
 data/
-  caseStudies.ts
-  experiments.ts
-  projects.ts
   certifications.ts
 lib/
   site.ts
@@ -92,15 +79,10 @@ npm run lint
 
 Update portfolio content in these files:
 
-- `data/projects.ts` for project cards, statuses, stack, GitHub links, and demo links.
-- `data/caseStudies.ts` for debugging stories and lessons learned.
-- `data/experiments.ts` for small prototypes and tool ideas.
 - `data/certifications.ts` for certifications, issuers, dates, and credential links. Salesforce certifications point to the public Trailblazer profile and the Full Stack Web Development certificate points to the Credly badge.
 - `data/workExperience.ts` for homepage work rows and `/work/[slug]` resume bullet points.
 - `lib/site.ts` for navigation, GitHub, LinkedIn, and site metadata.
 - `public/resume.pdf` for the footer PDF resume download.
-
-Use `planned` or `in progress` until a project has a real repository and demo. Avoid presenting unfinished ideas as completed work.
 
 ## Vercel Deployment
 
@@ -115,5 +97,3 @@ npm run build
 
 5. Use the default output handling for Next.js. No custom output directory is required.
 6. Add environment variables later only if a project demo needs API keys.
-
-After the first deployment, update project `demoUrl` fields in `data/projects.ts` and `data/experiments.ts` with real live links.
