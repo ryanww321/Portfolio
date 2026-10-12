@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Agentforce",
     "solutions engineer",
     "Next.js",
-    "AI-assisted development",
+    "AI-assisted workflows",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {

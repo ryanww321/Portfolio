@@ -27,7 +27,7 @@ export default function OpengraphImage() {
           <div style={{ display: "flex", fontSize: 44, color: "#d4d4d4" }}>{"Salesforce, Omnistudio & modern web"}</div>
         </div>
         <div style={{ display: "flex", fontSize: 28, color: "#a1a1a1" }}>
-          Experience Cloud · Omniscripts · Next.js · AI-assisted development
+          Experience Cloud · Omniscripts · Next.js · AI-assisted workflows
         </div>
       </div>
     ),
