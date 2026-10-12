@@ -24,10 +24,10 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", fontSize: 28, color: "#a1a1a1" }}>ryan-whitcomb-portfolio.vercel.app</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ display: "flex", fontSize: 84, fontWeight: 600, letterSpacing: "-0.02em" }}>{siteConfig.name}</div>
-          <div style={{ display: "flex", fontSize: 44, color: "#d4d4d4" }}>{"Salesforce & OmniStudio Consultant"}</div>
+          <div style={{ display: "flex", fontSize: 44, color: "#d4d4d4" }}>{"Salesforce & Omnistudio Consultant"}</div>
         </div>
         <div style={{ display: "flex", fontSize: 28, color: "#a1a1a1" }}>
-          Experience Cloud · OmniScripts · FlexCards · Public sector delivery
+          Experience Cloud · Omniscripts · FlexCards · Public sector delivery
         </div>
       </div>
     ),

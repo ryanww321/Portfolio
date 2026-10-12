@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   keywords: [
     "Ryan Whitcomb",
     "Salesforce consultant",
-    "OmniStudio consultant",
-    "OmniStudio solution architect",
+    "Omnistudio consultant",
+    "Omnistudio solution architect",
     "Salesforce Experience Cloud",
-    "OmniScript",
+    "Omniscripts",
     "FlexCards",
     "Salesforce Public Sector Solutions",
     "public sector Salesforce",
