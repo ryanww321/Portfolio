@@ -33,8 +33,7 @@ export const workExperience: WorkExperience[] = [
     highlights: [
       "Scoped and shipped 10 features and fixes on SwiftPass, a passport and visa customer portal built with Next.js, React, TypeScript, and Supabase, with pull requests reviewed and merged by the project architect.",
       "Wrote a Linear spec for each change with reproduction steps, context, and acceptance criteria, drove the implementation through Claude Code and Codex, and verified the real flow in the browser for every affected role before opening a pull request linked to its ticket.",
-      "Closed a duplicate-application race condition in PostgreSQL with a partial unique index.",
-      "Fixed a Supabase Storage path validation defect.",
+      "Closed a duplicate-application race condition with a PostgreSQL partial unique index and fixed a Supabase Storage path validation defect.",
       "Worked inside a Supabase Row-Level Security model spanning five roles across traveler, partner, and staff surfaces.",
       "Implemented authorization-aware paginated RPCs for the applications and team views, along with access-aware advanced and saved filters, and opened them for review.",
     ],
