@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { IndexSection } from "@/components/ui/IndexSection";
 import { Reveal } from "@/components/ui/Reveal";
 import { certifications } from "@/data/certifications";
-import { earlierWork, latestWork } from "@/data/workExperience";
+import { earlierWork, latestWork, modernWebWork } from "@/data/workExperience";
 
 export default function HomePage() {
   return (
@@ -18,6 +18,14 @@ export default function HomePage() {
           <Reveal delay={0.04}>
             <IndexSection title="Latest">
               {latestWork.map((work) => (
+                <WorkRow key={work.slug} {...work} />
+              ))}
+            </IndexSection>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <IndexSection title="Modern web and AI-assisted development">
+              {modernWebWork.map((work) => (
                 <WorkRow key={work.slug} {...work} />
               ))}
             </IndexSection>
