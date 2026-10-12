@@ -78,7 +78,7 @@ export const workExperience: WorkExperience[] = [
     highlights: [
       "Began the Ohio Department of Developmental Disabilities implementation in August 2020, translating program requirements into user stories and Salesforce configuration; the engagement continued after CGI acquired Sense Corp.",
       "Contributed to a Salesforce-based Adult Protective Services application for Oklahoma's Department of Human Services as a Salesforce Technical Analyst, supporting core data architecture, security model configuration, and release management and testing.",
-      "Built actionable Dashboards and Reports that provided leadership with real-time visibility into key performance indicators, turning raw system data into useful operational insight.",
+      "Built reports and dashboards giving leadership visibility into key performance indicators.",
     ],
     tools: ["Salesforce", "Flow", "Reports", "Dashboards", "Agile"],
   },
